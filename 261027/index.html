@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KAI COACHING｜Apex Legends コーチング</title>
+<meta name="description" content="ランクが上がらず、伸び悩んでいる方へ。元プレデターのコーチが試合を一緒に見て、次の1戦で直すことを1つに絞ります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@600;700&family=Cinzel:wght@500;600&display=swap">
+<style>
+
+:root {
+  --navy: #16294a; --navy-2: #22406f; --navy-3: #12223f; --line: rgba(243, 247, 255, .16);
+  --white: #f3f7ff; --mute: #a9bcdc; --blue: #74adff;
+  --plat: #a9d8dc; --dia: #8fc2ff;
+  --gold: #d9ad55; --gold-2: #f0cf86; --gold-ink: #1a1405;
+  --head: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --latin: "Cinzel", "Zen Old Mincho", serif;
+  --body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--navy); color: var(--white); font-family: var(--body); font-size: 15px; line-height: 1.8; }
+img { max-width: 100%; }
+.in { max-width: 1040px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 64px; }
+h2 { font-family: var(--head); font-weight: 600; font-size: clamp(22px, 6vw, 32px); line-height: 1.55; letter-spacing: .05em; margin: 0 0 28px; text-wrap: balance; }
+h2 .nb, .main .nb, .catch .nb, .sub .nb { display: inline-block; }
+.lead { color: var(--mute); margin: -16px 0 28px; max-width: 40em; }
+a:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
+
+
+.band { background: var(--white); color: var(--navy); font-size: 12px; text-align: center; padding: 5px 12px; font-weight: 700; }
+header { display: flex; justify-content: space-between; align-items: center; padding-block: 14px; }
+.logo { font-family: var(--latin); font-weight: 600; font-size: 15px; letter-spacing: .18em; }
+.logo small { font-family: var(--latin); font-weight: 500; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); margin-left: 10px; }
+.h-cta { font-size: 13px; color: var(--white); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px; }
+
+
+.hero { position: relative; }
+.head-wrap { position: absolute; top: 0; left: 0; right: 0; z-index: 2; }
+.fv { position: relative; overflow: hidden; padding-block: 112px 48px; background: var(--navy); }
+.fv-bg { position: absolute; top: 0; left: 0; right: 0; height: min(100%, 800px); }
+.fv-bg img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 100% 30%; }
+.fv-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10, 19, 38, .85), rgba(10, 19, 38, .45) 42%, transparent 58%), linear-gradient(180deg, transparent 55%, var(--navy)); }
+.fv .in { position: relative; }
+.eyebrow { color: var(--plat); font-weight: 500; font-size: 15px; letter-spacing: .06em; margin: 20px 0 4px; text-shadow: 0 1px 12px rgba(10, 19, 38, .9); }
+.main { font-family: var(--head); font-weight: 600; font-size: clamp(24px, 6.8vw, 44px); line-height: 1.35; letter-spacing: .06em; margin: 0; text-shadow: 0 2px 24px rgba(10, 19, 38, .75); }
+.main em, h2 em { font-style: normal; font-weight: 700; color: var(--gold-2); }
+.main .lead-in { font-size: clamp(22px, 6.3vw, 40px); letter-spacing: .08em; }
+.main em { display: block; white-space: nowrap; font-size: clamp(44px, 14vw, 104px); line-height: 1.2; letter-spacing: .04em; margin-top: 6px; }
+.ch { display: inline-block; animation: chIn .55s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes chIn { from { opacity: 0; transform: translateY(.3em); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+.sub { margin: 0; max-width: 560px; text-shadow: 0 1px 12px rgba(10, 19, 38, .9); }
+.badges { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; max-width: 460px; list-style: none; padding: 0; margin: 20px 0 0; }
+.badges li { font-size: 13px; text-align: center; white-space: nowrap; background: rgba(10, 19, 38, .55); border: 1px solid var(--line); border-radius: 999px; padding: 4px 8px; }
+.btn { display: block; background: linear-gradient(180deg, var(--gold-2), var(--gold)); color: var(--gold-ink); letter-spacing: .04em; text-align: center; text-decoration: none; font-weight: 700; font-size: 16px; padding: 15px 20px; border-radius: 10px; max-width: 420px; }
+.btn { position: relative; overflow: hidden; transition: transform .12s ease, filter .2s ease; }
+.btn::after { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .55), transparent); transform: skewX(-20deg); animation: shine 4.5s ease-in-out 1.2s infinite; }
+@keyframes shine { 0% { left: -60%; } 22%, 100% { left: 130%; } }
+.btn:hover { filter: brightness(1.06); }
+.btn:active { transform: translateY(1px) scale(.985); filter: brightness(.95); }
+.btn-note { font-size: 12px; color: var(--mute); margin: 8px 0 0; }
+.fv .btn { margin-top: 24px; }
+.chara { position: relative; margin: 0; background: rgba(243, 247, 255, .03); aspect-ratio: 1; }
+.chara img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.chara::before, .chara::after { content: ""; position: absolute; width: 18px; height: 18px; border: 1px solid var(--gold); }
+.chara::before { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+.chara::after { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+.proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); text-align: center; }
+.proof strong { display: block; font-family: var(--latin); font-weight: 500; letter-spacing: .04em; font-size: clamp(32px, 9vw, 48px); line-height: 1.2; font-variant-numeric: tabular-nums; }
+.proof strong small { font-size: .55em; margin-left: 1px; }
+.proof strong { white-space: nowrap; }
+.proof strong small.ja { font-family: var(--body); font-weight: 500; font-size: clamp(12px, 3.3vw, 18px); letter-spacing: 0; }
+.proof span { font-size: 12px; color: var(--mute); }
+
+
+.pain { background: var(--navy-3); }
+.voices { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.voices li { font-size: clamp(16px, 4.4vw, 19px); font-weight: 700; padding-left: 1.2em; text-indent: -1.2em; }
+.voices li::before { content: "― "; color: var(--mute); }
+.turn { margin-top: 32px; font-size: clamp(17px, 4.6vw, 21px); font-weight: 700; }
+.turn em { font-style: normal; color: var(--blue); }
+
+
+.prof { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 32px; align-items: start; }
+.career { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 4px; }
+.career li { display: grid; grid-template-columns: 7.5em 1fr; gap: 8px; font-size: 14px; }
+.career b { font-weight: 500; color: var(--plat); }
+.story { margin: 0 0 20px; }
+.ways { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.ways li { border-top: 1px solid var(--line); padding-top: 10px; }
+.ways b { display: block; }
+.ways span { color: var(--mute); font-size: 14px; }
+
+
+.results { background: var(--navy-3); }
+.voice-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.voice { --ink: #16294a; --ink-mute: #4d5d7a; --ink-line: rgba(22, 41, 74, .14);
+  position: relative; margin: 0; border: 1px solid transparent; border-radius: 14px; padding: 26px 22px 20px; background: var(--white); color: var(--ink); display: flex; flex-direction: column; gap: 14px; }
+.voice .catch { margin: 0; font-family: var(--head); font-weight: 700; font-size: clamp(14px, 3.7vw, 22px); line-height: 1.5; letter-spacing: .04em; text-align: center; text-wrap: balance; }
+.voice blockquote { margin: 0; flex: 1; font-size: clamp(11.5px, 3.1vw, 14.5px); line-height: 1.7; color: var(--ink-mute); }
+.voice figcaption { font-size: clamp(10.5px, 2.8vw, 13px); line-height: 1.6; text-align: center; border-top: 1px solid var(--ink-line); padding-top: 12px; }
+.voice figcaption b { display: block; font-weight: 700; }
+.voice figcaption b span { display: inline-block; }
+@media (max-width: 760px) {
+  .voice-cards { gap: 6px; margin-inline: -10px; }
+  .voice { padding: 18px 8px 12px; gap: 10px; border-radius: 10px; }
+  .voice .catch { font-size: clamp(11px, 3.45vw, 15px); letter-spacing: 0; }
+}
+
+
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; padding-top: 14px; }
+.plan { --ink: #16294a; --ink-mute: #4d5d7a; --ink-line: rgba(22, 41, 74, .14);
+  position: relative; border: 1px solid transparent; border-radius: 14px; padding: 26px 22px 20px; background: var(--white); color: var(--ink); display: flex; flex-direction: column; gap: 8px; text-align: center; }
+.plan.pick { border: 2px solid var(--gold); margin-block: -10px; padding-block: 34px 28px; box-shadow: 0 0 0 6px rgba(217, 173, 85, .16); }
+.plan .pill { position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; background: var(--gold); color: var(--gold-ink); font-size: 12px; font-weight: 700; letter-spacing: .06em; padding: 4px 14px; border-radius: 999px; }
+.plan h3 { margin: 0; font-family: var(--head); font-weight: 700; font-size: clamp(14px, 3.7vw, 20px); line-height: 1.4; }
+.plan .for { font-size: clamp(10.5px, 2.8vw, 13px); line-height: 1.5; color: var(--ink-mute); }
+.plan .regular { font-size: clamp(10.5px, 2.8vw, 13px); color: var(--ink-mute); margin-top: 4px; }
+.plan .regular s { font-variant-numeric: tabular-nums; }
+.plan .off { font-size: clamp(11px, 2.9vw, 13px); font-weight: 700; color: #8a6a1f; line-height: 1.4; }
+.price { font-family: var(--latin); font-weight: 600; font-size: clamp(21px, 5.6vw, 34px); line-height: 1.2; font-variant-numeric: tabular-nums; }
+.price small { display: block; font-family: var(--body); font-weight: 400; font-size: clamp(10.5px, 2.8vw, 13px); color: var(--ink-mute); }
+.plan ul { list-style: none; margin: 6px 0 0; padding: 10px 0 0; border-top: 1px solid var(--ink-line); font-size: clamp(10.5px, 2.9vw, 13.5px); line-height: 1.6; color: var(--ink-mute); display: grid; gap: 4px; }
+.price-note { font-size: 13px; color: var(--mute); margin-top: 24px; }
+@media (max-width: 760px) {
+  .plans { gap: 6px; margin-inline: -10px; }
+  .plan { padding: 18px 6px 12px; gap: 5px; border-radius: 10px; }
+  .plan.pick { margin-block: -6px; padding-block: 24px 16px; box-shadow: 0 0 0 2px rgba(217, 173, 85, .2); }
+  .plan .pill { font-size: 10px; letter-spacing: .02em; padding: 2px 8px; }
+  .price-note { margin-top: 18px; }
+}
+
+
+.flow { list-style: none; padding: 0; margin: 0 0 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 20px; counter-reset: s; }
+.flow li { counter-increment: s; border-top: 2px solid var(--blue); padding-top: 12px; }
+.flow li::before { content: counter(s, decimal-leading-zero); font-family: var(--latin); font-weight: 500; font-size: 26px; color: var(--blue); display: block; line-height: 1.2; }
+.flow b { display: block; margin: 4px 0; }
+.flow span { font-size: 14px; color: var(--mute); }
+.qa { border-top: 1px solid var(--line); padding-block: 16px; }
+.qa:last-child { border-bottom: 1px solid var(--line); }
+.qa h3 { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.6; }
+.qa p { margin: 6px 0 0; color: var(--mute); font-size: 14px; }
+
+
+.last { background: radial-gradient(80% 90% at 50% 100%, var(--navy-2), transparent 70%), var(--navy-3); text-align: center; }
+.last .in { display: grid; justify-items: center; gap: 16px; }
+.last .btn { width: 100%; }
+
+footer { padding-block: 32px 110px; font-size: 12px; color: var(--mute); text-align: center; }
+footer p { margin: 4px 0; }
+
+
+.fixed-cta { position: fixed; left: 0; right: 0; bottom: 0; background: rgba(22, 41, 74, .94); border-top: 1px solid var(--line);
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: none; transition: transform .25s ease; }
+.fixed-cta.off { transform: translateY(100%); }
+.fixed-cta .btn { max-width: none; padding: 12px; font-size: 15px; }
+
+@media (max-width: 760px) {
+  section { padding-block: 52px; }
+  .prof { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .chara { aspect-ratio: 4 / 3; }
+  .proof { gap: 4px; }
+  .fv { padding-top: 272px; }
+  .badges { gap: 6px; margin-top: 16px; }
+  .badges li { font-size: 11.5px; padding: 3px 4px; }
+  .fv-bg { height: 480px; }
+  .fv-bg img { object-position: 95% 0; }
+  .fv-bg::after { background: linear-gradient(180deg, rgba(10, 19, 38, .35), transparent 22%, transparent 48%, var(--navy) 94%); }
+  .fixed-cta { display: block; }
+  .h-cta { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .fixed-cta { transition: none; } .btn::after { animation: none; display: none; } }
+</style>
+</head>
+<body>
+
+<div class="band">SAMPLE｜デザイン工房 Nob が制作した見本です</div>
+
+<div class="hero">
+<div class="head-wrap">
+  <div class="in">
+    <header>
+      <div class="logo">KAI COACHING<small>Apex Legends</small></div>
+      <a class="h-cta" href="#dm">気軽に無料相談</a>
+    </header>
+  </div>
+</div>
+
+<section class="fv">
+  <div class="fv-bg"><img src="img/hero.jpg" alt="モニターに映るキツネのキャラクターを見つめるプレイヤーの後ろ姿" fetchpriority="high"></div>
+  <div class="in">
+    <h1 class="main"><span class="nb lead-in">“なんとなく負ける”を、</span><em>終わらせる。</em></h1>
+    <p class="eyebrow">ランクが上がらず、伸び悩んでいる方へ</p>
+    <p class="sub"><span class="nb">元プレデターのコーチが</span><span class="nb">試合を一緒に見て、</span><span class="nb">次の1戦で直すことを</span><span class="nb">1つに絞ります。</span></p>
+    <ul class="badges">
+      <li>VCなしの動画添削もOK</li>
+      <li>延長しても追加料金なし</li>
+      <li>受講後に振り返りレポート</li>
+      <li>平日の夜だけでもOK</li>
+    </ul>
+    <a class="btn" href="#dm">気軽に無料相談</a>
+    <p class="btn-note">「ランク帯」と「困っていること」を送るだけ。相談だけでもOKです</p>
+    <div class="proof">
+      <div><strong>320<small class="ja">人以上</small></strong><span>指導した人数</span></div>
+      <div><strong>☆4.9</strong><span>受講者の評価</span></div>
+      <div><strong>98<small>%</small></strong><span>3か月でランク帯UP</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="pain">
+  <div class="in">
+    <h2><span class="nb">こんなこと、</span><span class="nb">ありませんか？</span></h2>
+    <ul class="voices">
+      <li>1,000時間以上やっているのに、ゴールドとプラチナを行ったり来たり</li>
+      <li>やっとダイヤに上がっても、すぐに落とされる</li>
+      <li>上手い人の動画を見ても、自分の何が悪いのか分からない</li>
+      <li>平日の夜しか遊べないから、練習量ではかなわない</li>
+    </ul>
+    <p class="turn">練習量を増やさなくても、<em>自分が直せる1つ</em>は見つけられます。</p>
+  </div>
+</section>
+
+<section id="coach">
+  <div class="in">
+    <h2><span class="nb">コーチ</span><span class="nb">「KAI」について</span></h2>
+    <div class="prof">
+      <div class="chara"><img src="img/coach.jpg" alt="モニターを見ながら微笑むコーチ（仮の画像）" loading="lazy"></div>
+      <div>
+        <ul class="career">
+          <li><b>最高ランク</b>プレデター（シーズン17・19・21）</li>
+          <li><b>使用環境</b>PC。PADの方の指導も多数</li>
+          <li><b>指導歴</b>3年・のべ320人以上</li>
+        </ul>
+        <p class="story">じつは自分も、ダイヤ4で半年止まっていました。練習量を増やしても上がらず、原因が分かったのは自分の試合を1戦ずつ見直してから。だから受講者さんにも「量」ではなく「直す場所」を一緒に探します。</p>
+        <ul class="ways">
+          <li><b>怒らない・急かさない</b><span>VCが初めての方、緊張しやすい方も大歓迎です。</span></li>
+          <li><b>最初に目標を決める</b><span>「いつまでに、どのランク帯へ」を決めてから始めるので、ブレません。</span></li>
+          <li><b>直すのは1回に1つ</b><span>あれこれ言わず、次の試合で試せることを1つだけお伝えします。</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results">
+  <div class="in">
+    <h2><span class="nb">受講した方の</span><span class="nb">ランク帯と声</span></h2>
+    <div class="voice-cards">
+      <figure class="voice">
+        <p class="catch"><span class="nb">ゴールドでも、</span><span class="nb">受けて</span><span class="nb">よかった。</span></p>
+        <blockquote>「受けて意味があるのか不安でした。今のランクに合う目標から決めてくれました」</blockquote>
+        <figcaption>20歳・大学生・PAD<b><span>ゴールド2</span> <span>→ プラチナ1</span></b></figcaption>
+      </figure>
+      <figure class="voice">
+        <p class="catch"><span class="nb">問題は、</span><span class="nb">撃ち合う前の</span><span class="nb">位置でした。</span></p>
+        <blockquote>「直すことを1つに絞ってもらい、1つ直しただけで生き残る時間が変わりました」</blockquote>
+        <figcaption>28歳・会社員・PC<b><span>プラチナ4</span> <span>→ ダイヤ3</span></b></figcaption>
+      </figure>
+      <figure class="voice">
+        <p class="catch"><span class="nb">VCが苦手でも、</span><span class="nb">文字で十分。</span></p>
+        <blockquote>「VCが不安で動画添削から。文字でも分かりやすくて、次はマンツーマンにしました」</blockquote>
+        <figcaption>31歳・会社員・PC<b><span>ダイヤ4</span> <span>→ マスター</span></b></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="in">
+    <h2>料金</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>動画添削</h3>
+        <div class="for">VCなしで受けたい方に</div>
+        <div class="regular">通常 <s>2,000円</s></div>
+        <div class="off">20%OFF</div>
+        <div class="price">1,600円<small>1試合</small></div>
+        <ul><li>録画を送るだけ</li><li>48時間以内に返信</li></ul>
+      </div>
+      <div class="plan pick">
+        <span class="pill">いちばん人気</span>
+        <h3>マンツーマン</h3>
+        <div class="for">90分・まず受けるならこれ</div>
+        <div class="regular">通常 <s>3,000円</s></div>
+        <div class="off">20%OFF</div>
+        <div class="price">2,400円<small>1回</small></div>
+        <ul><li>画面共有で一緒に</li><li>同行もOK</li></ul>
+      </div>
+      <div class="plan">
+        <h3>月4回</h3>
+        <div class="for">本気で上げたい方に</div>
+        <div class="regular">通常 <s>11,000円</s></div>
+        <div class="off">20%OFF</div>
+        <div class="price">8,800円<small>1か月</small></div>
+        <ul><li>90分×月4回</li><li>DMで質問し放題</li></ul>
+      </div>
+    </div>
+    <p class="price-note">20%OFFは今月の受付分だけです（見本のため架空）。料金は税込で、どのプランも振り返りレポートが付きます。延長しても追加料金はございません。</p>
+  </div>
+</section>
+
+<section class="results" id="flow">
+  <div class="in">
+    <h2><span class="nb">受講までの流れ</span></h2>
+    <ol class="flow">
+      <li><b>DMで相談</b><span>今のランク帯と、困っていることを送るだけ。相談だけで終わってもかまいません。</span></li>
+      <li><b>目標を決める</b><span>15分のヒアリングで「いつまでに、どこへ」を決めます。</span></li>
+      <li><b>画面共有・同行</b><span>一緒に試合を見て、直す場所を1つに絞ります。</span></li>
+      <li><b>振り返りレポート</b><span>当日の内容を図にしてお渡し。あとで見返せます。</span></li>
+    </ol>
+
+    <h2>申し込む前に、気になること</h2>
+    <div class="faq">
+      <div class="qa"><h3>DMで相談したら、受講しないといけませんか？</h3><p>いいえ。相談だけでも大歓迎です。こちらから何度も連絡したり、無理にすすめたりはしません。</p></div>
+      <div class="qa"><h3>DMだけのやりとりで、お支払いは大丈夫ですか？</h3><p>お支払いは受講する日が決まってからです。相談の段階でお金がかかることはありません。</p></div>
+      <div class="qa"><h3>受けても上がらなかったら？</h3><p>上がり方は人によって違い、全員が同じ結果になるとはお約束できません。そのぶん最初に目標を決めて、直す場所と練習のしかたをはっきりお伝えします。</p></div>
+      <div class="qa"><h3>厳しく言われませんか？</h3><p>怒ったり急かしたりはしません。次の試合で試せることを、1回に1つだけお伝えします。</p></div>
+      <div class="qa"><h3>受けられる時間帯は？</h3><p>平日は20時〜25時、土日は13時から受け付けています。DMで希望の日時をお知らせください。</p></div>
+      <div class="qa"><h3>18歳未満でも受けられますか？</h3><p>Apex Legends は17才以上対象のゲームです。18歳未満の方は、保護者の方の同意を得てからお申し込みください。</p></div>
+      <div class="qa"><h3>アカウントを預ける必要はありますか？</h3><p>ありません。プレイするのはご本人だけです。コーチは試合を一緒に見て、直す場所をお伝えします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="last" id="dm">
+  <div class="in">
+    <h2><span class="nb">次のシーズンは、</span><em class="nb">ひとつ上のランク帯で。</em></h2>
+    <a class="btn" href="#dm">気軽に無料相談</a>
+    <p class="btn-note">今月の受付 残り4枠（見本のため架空です）</p>
+  </div>
+</section>
+
+<footer>
+  <div class="in">
+    <p>制作見本です。会社名・数値・人物はすべて架空です。画像はすべて画像生成AIで作成したイメージです。</p>
+    <p>Apex Legends は Electronic Arts Inc. の商標です。当サービスは EA とは関係ありません。</p>
+    <p>デザイン工房 Nob</p>
+  </div>
+</footer>
+
+<div class="fixed-cta"><a class="btn" href="#dm">気軽に無料相談</a></div>
+
+<script>
+// 見せ場の動きは1か所だけ：見出しを1文字ずつ出す（前半は速く、「終わらせる。」はゆっくり）
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var h1 = document.querySelector('.main');
+  var delay = .3;
+  function split(el, step) {
+    var text = el.textContent;
+    el.textContent = '';
+    Array.from(text).forEach(function (c) {
+      var s = document.createElement('span');
+      s.className = 'ch';
+      s.textContent = c;
+      s.style.animationDelay = delay.toFixed(2) + 's';
+      el.appendChild(s);
+      delay += step;
+    });
+  }
+  h1.setAttribute('aria-label', h1.textContent);
+  split(h1.querySelector('.lead-in'), .09);
+  delay += .2;
+  split(h1.querySelector('em'), .18);
+})();
+
+// 下に固定するボタンは、FVと最後のボタンが画面にある間だけ隠す（同じボタンを2つ見せない）
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var bar = document.querySelector('.fixed-cta');
+  var seen = new Set();
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+    bar.classList.toggle('off', seen.size > 0);
+  });
+  io.observe(document.querySelector('.fv .btn'));
+  io.observe(document.querySelector('.last .btn'));
+})();
+</script>
+</body>
+</html>
