@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VELTIS 純プラチナ地金（制作見本）</title>
+<meta name="description" content="架空の純プラチナ地金ブランド VELTIS の制作見本です。">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Inter:wght@200;400&display=swap" rel="stylesheet">
+<script>
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+</script>
+<style>
+
+:root{
+  --black:#000;
+  --white:#fff;
+  --pt-light:#d6d8da;
+  --pt:#a2a6aa;
+  --pt-dark:#34373a;
+  --mirror:linear-gradient(168deg,#fff 0%,#e8eaec 28%,#858a8f 47%,#f8f9f9 58%,#b4b8bc 78%,#fff 100%);
+  --head:"Zen Kaku Gothic New",sans-serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic UI",sans-serif;
+  --num:"Inter",sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{background:var(--black);-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--black);color:var(--pt-light);font:400 16px/1.9 var(--body);font-feature-settings:"palt"}
+a:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+
+.sample{padding:6px 20px;font-size:12px;line-height:1.6;color:var(--pt);border-bottom:1px solid var(--pt-dark)}
+
+
+.fv{position:relative}
+.frame{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--black)}
+.frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:right bottom}
+.frame::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,var(--black),transparent 12%)}
+
+h1{position:absolute;z-index:1;top:6vw;left:20px;right:0;color:var(--white);font-family:var(--head);font-weight:300;line-height:1}
+h1 .lead-in{display:block;font-size:8.4vw;letter-spacing:.02em}
+h1 em{display:block;margin-top:2vw;margin-left:-.04em;font-style:normal;font-size:18vw;letter-spacing:-.03em;line-height:1.15;white-space:nowrap;
+  background:var(--mirror);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1.split em{background:none}
+.ch{display:inline-block}
+.motion .ch{animation:chIn .8s cubic-bezier(.2,.7,.2,1) both}
+.motion h1 em .ch{background:var(--mirror) 0 0/240% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation-name:chMetal;animation-duration:.8s}
+@keyframes chIn{from{opacity:0;transform:translateY(.25em)}to{opacity:1;transform:none}}
+@keyframes chMetal{from{opacity:0;transform:translateY(.05em);filter:blur(8px);background-position:100% 0}to{opacity:1;transform:none;filter:blur(0);background-position:0 0}}
+
+.fv-text{padding:4px 20px 52px}
+.who{color:var(--white);font-size:20px;line-height:1.6}
+.btn{display:block;padding:15px 20px;background:var(--white);color:var(--black);border-radius:2px;text-align:center;text-decoration:none;font-weight:500;transition:background .2s,transform .1s}
+.btn:hover{background:var(--pt-light)}
+.btn:active{transform:translateY(1px)}
+
+section{padding:64px 20px;border-top:1px solid var(--pt-dark)}
+h2{color:var(--white);font-family:var(--head);font-weight:300;font-size:23px;line-height:1.5}
+
+.nb{display:inline-block}
+h3{color:var(--white);font-size:17px;font-weight:500;line-height:1.6}
+.lead{margin-top:14px}
+.note{font-size:13px;line-height:1.8;color:var(--pt)}
+
+
+.motion .rv{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+.motion .rv.in{opacity:1;transform:none}
+
+.question{padding-block:26vh;border-top:0}
+.question p{color:var(--white);font-family:var(--head);font-weight:300;font-size:10.4vw;line-height:1.4}
+
+.bars{margin-top:32px;display:grid;gap:26px}
+.bars dt{font-size:14px}
+.bars dd{display:flex;align-items:baseline;gap:6px;font-family:var(--num);font-weight:200;line-height:1;letter-spacing:-.02em;color:var(--pt)}
+.bars dd small{font-size:14px;letter-spacing:0;font-weight:400}
+.bars dd b{font-weight:200;font-size:40px}
+.bars .bar{display:block;height:2px;margin-top:10px;background:var(--pt-dark)}
+.bars .main dt{color:var(--white)}
+.bars .main dd{color:var(--white)}
+.bars .main dd b{font-size:92px}
+.bars .main .bar{height:4px;background:var(--mirror)}
+.conds{margin-top:30px;padding-top:16px;border-top:1px solid var(--pt-dark)}
+.answer{color:var(--white);font-family:var(--head);font-weight:300;font-size:22px;line-height:1.7}
+.answer+.note{margin-top:18px}
+
+.photo{aspect-ratio:16/10;overflow:hidden;background:var(--black);margin:28px -20px 0}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+.steps{list-style:none;padding:0;margin-top:28px}
+.steps li{padding:14px 0;border-top:1px solid var(--pt-dark)}
+.steps p{font-size:15px;line-height:1.8}
+.lot{margin-top:18px;font-family:var(--num);font-weight:200;font-size:40px;line-height:1.2;color:var(--white)}
+.lot small{font-size:13px;font-weight:400;font-family:var(--body);color:var(--pt);display:block}
+.mark{margin-top:44px}
+.stamps{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.stamps b{display:block;padding:18px 0;border-block:1px solid var(--pt-dark);font-family:var(--num);font-weight:200;font-size:30px;letter-spacing:.06em;line-height:1.2;color:var(--white)}
+.stamps span{display:block;margin-top:8px;font-size:13px;line-height:1.7;color:var(--pt)}
+
+.spec{margin-top:26px}
+.spec div{padding:13px 0;border-top:1px solid var(--pt-dark)}
+.spec dt{font-size:13px;color:var(--pt)}
+.spec dd{color:var(--white)}
+.spec .cond{display:block;font-size:13px;line-height:1.7;color:var(--pt)}
+.fits{display:grid;grid-template-columns:repeat(2,1fr);gap:0 20px;list-style:none;padding:0;margin-top:2px}
+.fits li{display:flex;justify-content:space-between}
+
+.qa{margin-top:8px}
+.qa h3{margin-top:30px}
+.qa p{margin-top:4px;font-size:15px}
+
+.doors{margin-top:30px;display:grid;gap:36px}
+.doors p{margin-top:4px;font-size:15px}
+.doors .btn{margin-top:14px}
+.sample-note{margin-top:30px}
+
+footer{padding:28px 20px 40px;border-top:1px solid var(--pt-dark);font-size:12px;line-height:1.8;color:var(--pt)}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:active{transform:none}}
+
+@media (min-width:900px){
+  .sample{padding-inline:6vw}
+  .fv{display:grid;grid-template-columns:1fr 44vw;min-height:min(55vw,calc(100vh - 34px));align-items:end}
+  .frame{grid-column:2;grid-row:1;height:100%;aspect-ratio:auto;max-height:calc(100vh - 34px)}
+  .frame::after{background:linear-gradient(to right,var(--black),transparent 26%),linear-gradient(to top,var(--black),transparent 10%)}
+  h1{top:7vh;left:6vw}
+  h1 .lead-in{font-size:3vw}
+  h1 em{margin-top:1vw;font-size:9.4vw}
+  .fv-text{grid-column:1;grid-row:1;position:relative;z-index:1;padding:0 0 48px 6vw;max-width:50vw}
+  .who{font-size:24px}
+  section{padding:96px 6vw}
+  h2{font-size:32px}
+  .question{padding-block:150px}
+  .question p{font-size:58px}
+  .compare,.spec-sec,.qa-sec{display:grid;grid-template-columns:5fr 7fr;column-gap:6vw}
+  .bars{margin-top:0}
+  .compare .conds{grid-column:2}
+  .made{display:grid;grid-template-columns:1fr 1fr;column-gap:6vw}
+  .photo{margin:0;grid-column:2;grid-row:1 / span 2}
+  .steps{grid-column:1 / -1;display:grid;grid-template-columns:repeat(4,1fr);column-gap:32px;margin-top:48px}
+  .made .lot,.made .mark{grid-column:1 / -1}
+  .stamps{max-width:560px}
+  .spec,.qa{margin-top:0}
+  .qa>div:first-child h3{margin-top:0}
+  .doors{grid-template-columns:repeat(3,1fr);gap:40px}
+  .doors>div{display:flex;flex-direction:column}
+  .doors p{flex:1}
+  footer{padding-inline:6vw}
+}
+</style>
+</head>
+<body>
+<p class="sample">SAMPLE｜デザイン工房 Nob が制作した見本です</p>
+
+<main>
+<div class="fv">
+  <h1 aria-label="傷がつきにくい、純プラチナ"><span class="lead-in">傷がつきにくい、</span><em>純プラチナ</em></h1>
+  <script>
+  (function () {
+    if (!document.documentElement.classList.contains('motion')) return;
+    var h1 = document.querySelector('h1');
+    var delay = .3;
+    function split(el, step, hold) {
+      var text = el.textContent;
+      el.textContent = '';
+      Array.from(text).forEach(function (c, i) {
+        var s = document.createElement('span');
+        s.className = 'ch';
+        s.setAttribute('aria-hidden', 'true');
+        s.textContent = c;
+        s.style.animationDelay = delay.toFixed(2) + 's';
+        el.appendChild(s);
+        delay += i === 0 && hold ? hold : step;
+      });
+    }
+    h1.classList.add('split');
+    split(h1.querySelector('.lead-in'), .06);
+    delay += .15;
+    // 「純」で少しためて、「プラチナ」を流す
+    split(h1.querySelector('em'), .09, 1.05);
+  })();
+  </script>
+  <div class="frame"><img src="img/hero.jpg" width="825" height="1024" alt="黒い背景に置いた、鏡面に磨いた純プラチナの指輪" fetchpriority="high"></div>
+  <div class="fv-text">
+    <p class="who">素材にこだわりたい貴方へ</p>
+  </div>
+</div>
+
+<section class="question">
+  <p class="rv"><span class="nb">純プラチナは、</span><span class="nb">柔らかいのでは？</span></p>
+</section>
+
+<section class="compare" id="compare">
+  <h2 class="rv"><span class="nb">同じ条件で、</span><span class="nb">測りました。</span></h2>
+  <dl class="bars rv">
+    <div class="main"><dt>VELTIS Pt999</dt><dd><small>Hv</small><b>240</b></dd><span class="bar" style="width:100%"></span></div>
+    <div><dt>当社の従来品 Pt900</dt><dd><small>Hv</small><b>150</b></dd><span class="bar" style="width:62.5%"></span></div>
+    <div><dt>当社の従来品 Pt999</dt><dd><small>Hv</small><b>120</b></dd><span class="bar" style="width:50%"></span></div>
+  </dl>
+  <div class="conds rv">
+    <p class="answer">素材にこだわりたい貴方へ。<br>純プラチナでも、傷がつきにくい硬さを実現しました。</p>
+    <p class="note">ビッカース硬さ。厚さ2mmの板を圧延・熱処理したあと、荷重1kgf、保持10秒、室温で測定。各5点の平均です。<br>※硬くても、傷や変形が起こることはあります。</p>
+  </div>
+</section>
+
+<section class="made">
+  <div>
+    <h2 class="rv"><span class="nb">硬さは、配合と</span><span class="nb">鍛え方で作ります。</span></h2>
+    <p class="lead rv">プラチナに微量のルテニウムを加え、品位は Pt999 に保ちます。これを鍛えて板や線にし、温度と時間を管理した熱処理で硬さを整えます。</p>
+  </div>
+  <div class="photo rv"><img src="img/plate.jpg" width="1024" height="640" alt="鏡面に圧延して重ねた、2枚の純プラチナの板" loading="lazy"></div>
+  <ol class="steps">
+    <li class="rv"><h3>溶解と分析</h3><p>ロットごとに品位を分析します。外部の分析機関でも確かめています。</p></li>
+    <li class="rv"><h3>鍛造と圧延</h3><p>圧延の条件をロットごとに記録します。</p></li>
+    <li class="rv"><h3>熱処理</h3><p>温度と時間を記録し、ロット番号でたどれるようにします。</p></li>
+    <li class="rv"><h3>硬さの検査</h3><p>抜き取りで測り、結果は商談時にお見せします。</p></li>
+  </ol>
+  <p class="lot rv"><small>ロットごとの硬さのばらつきの目安</small>±Hv 10</p>
+  <div class="mark">
+    <h3 class="rv">製品に、刻印を2つ打ちます。</h3>
+    <div class="stamps rv">
+      <div><b>Pt999</b><span>品位の刻印。地金の純度を表します。</span></div>
+      <div><b>VELTIS</b><span>素材の名前。品位の証明ではありません。</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="spec-sec">
+  <h2 class="rv">仕様</h2>
+  <dl class="spec rv">
+    <div><dt>品位</dt><dd>Pt999</dd></div>
+    <div><dt>配合</dt><dd>プラチナ、微量のルテニウム</dd></div>
+    <div><dt>硬さ</dt><dd>Hv 240<span class="cond">圧延・熱処理後の板。荷重1kgf、保持10秒、室温で測定。線や完成品、溶接などで熱が入った部分の硬さは変わります</span></dd></div>
+    <div><dt>比重</dt><dd>21.4</dd></div>
+    <div><dt>仕上げ</dt><dd>鏡面</dd></div>
+    <div><dt>供給の形</dt><dd>板、線</dd></div>
+    <div><dt>最小ロット</dt><dd>100g</dd></div>
+    <div><dt>加工の向き不向き</dt><dd>
+      <ul class="fits">
+        <li>鍛造<span>○</span></li>
+        <li>線引き<span>○</span></li>
+        <li>レーザー溶接<span>○</span></li>
+        <li>鋳造<span>△</span></li>
+        <li>チェーン<span>△</span></li>
+        <li>石留め<span>△</span></li>
+      </ul>
+      <span class="cond">△は形や条件によります。鋳造すると硬さは上の数字と変わります。試作でお確かめください。</span>
+    </dd></div>
+  </dl>
+</section>
+
+<section class="qa-sec">
+  <h2 class="rv"><span class="nb">素材について、</span><span class="nb">気になること</span></h2>
+  <div class="qa">
+    <div class="rv"><h3>金属アレルギーが心配です。</h3>
+    <p>プラチナのほかに、微量のルテニウムを配合しています。反応には個人差があり、お約束はできません。心配な方は、皮膚科でご相談ください。</p></div>
+    <div class="rv"><h3>色は変わりますか。</h3>
+    <p>プラチナは色が変わりにくい金属ですが、皮脂や汚れでくもって見えることはあります。ぬるま湯と中性洗剤で洗い、柔らかい布で拭いてください。</p></div>
+    <div class="rv"><h3>資産としての価値はありますか。</h3>
+    <p>貴金属としての評価は、品位と重さで決まるのが一般的です。素材の名前による上乗せはお約束できません。買い取りの条件は、買い取り店でご確認ください。</p></div>
+    <div class="rv"><h3>サイズ直しはできますか。</h3>
+    <p>硬い素材のため、工房によっては断られることがあります。お買い上げの店を通して、当社の窓口で承ります。サイズ直しか同じ形への交換をご案内し、費用と日数はお品を確かめてからお知らせします。</p></div>
+    <div class="rv"><h3>従来のプラチナより価格が高いのはなぜですか。</h3>
+    <p>地金の価格に、鍛造、熱処理、ロットごとの検査の費用が加わるためです。価格は相場で動くので、ここには載せていません。製品の価格は取扱店で、地金の価格は商談でお伝えします。</p></div>
+    <div class="rv"><h3>製品に VELTIS の名前を使えますか。</h3>
+    <p>登録制です。使える製品の範囲と表記の決まりを、商談でご案内します。</p></div>
+    <div class="rv"><h3>地金の出どころは分かりますか。</h3>
+    <p>精錬所の名前と調達の方針を書面にしています。取扱店か、商談の場でお渡しします。</p></div>
+    <div class="rv"><h3>量産でも、同じ硬さになりますか。</h3>
+    <p>ロットごとに品位を分析し、硬さを抜き取りで測ります。ばらつきの目安は ±Hv 10 です。供給できる量と納期はご注文の量で変わるので、商談でお答えします。</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="rv"><span class="nb">ご用件ごとに、</span><span class="nb">ご案内します。</span></h2>
+  <div class="doors">
+    <div class="rv"><h3>実物をご覧になりたい方</h3>
+    <p>取扱店で、実物を手に取ってお確かめいただけます。</p>
+    <a class="btn" href="#contact">取扱店を探す</a></div>
+    <div class="rv"><h3>取引をご検討の方</h3>
+    <p>仕様書とサンプル板をお持ちして、ご説明します。</p>
+    <a class="btn" href="#contact">商談を申し込む</a></div>
+    <div class="rv"><h3>あとで見返したい方</h3>
+    <p>仕様をまとめたPDFを、メールでお送りします。展示会でご覧になった方もどうぞ。</p>
+    <a class="btn" href="#contact">仕様書のPDFを受け取る</a></div>
+  </div>
+  <p class="note sample-note">制作見本のため、どのボタンにも移動先はありません。</p>
+</section>
+</main>
+
+<footer>
+  <p>ヴェルティス地金株式会社</p>
+  <p>制作見本です。会社名・数値・人物はすべて架空です。</p>
+  <p>写真は画像生成AIで作成したイメージです。</p>
+  <p>制作：デザイン工房 Nob</p>
+</footer>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin: '0px 0px -8% 0px'});
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
+</body>
+</html>
